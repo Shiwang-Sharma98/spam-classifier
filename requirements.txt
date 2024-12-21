@@ -4,3 +4,8 @@ Flask
 Flask-Cors
 numpy
 pandas
+ipykernel
+matplotlib
+seaborn
+wordcloud
+xgboost
