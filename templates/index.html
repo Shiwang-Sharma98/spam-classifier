@@ -6,7 +6,7 @@
         <title>Spam Classifier</title>
 
         <!--Add bootstrap-->
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
         <!--Add custom CSS-->
         <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
@@ -20,41 +20,74 @@
             .header {
                 background-color: #007bff; /* Blue background color */
                 color: #fff; /* White text color */
-                padding: 20px 0; /* Top and bottom padding */
+                padding: 60px 0; /* Increased padding for more space */
+            }
+
+            .header-content {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .header-text, .header-image {
+                text-align: center;
+                padding: 15px;
             }
 
             .header h1 {
                 font-size: 2.5rem; /* Larger font size */
                 font-weight: bold; /* Bold text */
+                margin-bottom: 20px;
             }
 
             .header p {
                 font-size: 1.25rem; /* Larger font size for the description */
+                margin-bottom: 25px;
+            }
+
+            .header-image img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 10px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+
+            @media (max-width: 768px) {
+                .header-content {
+                    flex-direction: column;
+                }
             }
         </style>
     </head>
     <body>
-        <nav class = "navbar navbar-expand-lg navbar-light bg-light">
-            <h1>Spam Classifier</h1>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <i class="fas fa-shield-alt"></i> Spam Classifier
+                </a>
+            </div>
         </nav>
 
-        <section class="header" text-center">
+        <section class="header text-center">
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
+                <div class="header-content">
+                    <div class="header-text col-lg-6">
                         <h1 class="display-4">Protecting Your Emails</h1>
-                        <p class ="lead">Utilizing Advanced Machine Learning Algorithms</p>
-                        <a href="https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset" class="btn btn-secondary btn-lg">Learn More</a>
+                        <p class="lead">Utilizing Advanced Machine Learning Algorithms</p>
+                        <a href="https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset" 
+                           class="btn btn-secondary btn-lg">
+                            Learn More
+                        </a>
                     </div>
-                </div>
-                <div class="col-lg-6">
-                    <!-- Add an image or illustration here -->
-                    <img src="https://i.ytimg.com/vi/A2X65q2fkBo/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAz0rf3ZnoowXYWJlXjshJKPnrrJA" alt="Spam Filter" class="img-fluid">
+                    <div class="header-image col-lg-6">
+                        <img src="https://i.ytimg.com/vi/A2X65q2fkBo/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAz0rf3ZnoowXYWJlXjshJKPnrrJA" 
+                             alt="Spam Filter" class="img-fluid">
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Form Section -->
+        <!-- Rest of the code remains the same as in the original file -->
         <section class="form text-center py-5">
             <div class="container">
                 <div class="row">
@@ -83,43 +116,33 @@
         </section>
 
         <!-- Features Section -->
-<section id="features" class="features text-center py-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="feature">
-                    <!-- Add a feature icon -->
-                    <i class="fas fa-shield-alt fa-4x mb-3"></i>
-                    <h3 class="h4">Security</h3>
-                    <p class="text-muted">Our system uses state-of-the-art machine learning algorithms to Classify the Spams.</p>
+        <section id="features" class="features text-center py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="feature">
+                            <i class="fas fa-shield-alt fa-4x mb-3"></i>
+                            <h3 class="h4">Security</h3>
+                            <p class="text-muted">Our system uses state-of-the-art machine learning algorithms to Classify the Spams.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="feature">
+                            <i class="fas fa-lock fa-4x mb-3"></i>
+                            <h3 class="h4">Privacy</h3>
+                            <p class="text-muted">Your personal and financial information is kept safe and confidential.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="feature">
+                            <i class="fas fa-globe fa-4x mb-3"></i>
+                            <h3 class="h4">Global Reach</h3>
+                            <p class="text-muted">We protect cardholders worldwide, ensuring peace of mind wherever you are.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-4">
-                <div class="feature">
-                    <!-- Add a feature icon -->
-                    <i class="fas fa-lock fa-4x mb-3"></i>
-                    <h3 class="h4">Privacy</h3>
-                    <p class="text-muted">Your personal and financial information is kept safe and confidential.</p>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="feature">
-                    <!-- Add a feature icon -->
-                    <i class="fas fa-globe fa-4x mb-3"></i>
-                    <h3 class="h4">Global Reach</h3>
-                    <p class="text-muted">We protect cardholders worldwide, ensuring peace of mind wherever you are.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Footer -->
-<footer class="footer text-center py-3">
-    <div class="container">
-        <p class="text-muted">&copy; 2023 Master_Neuron. All rights reserved.</p>
-    </div>
-</footer>
-    </body>
+        </section>
 
-    
+    </body>
 </html>
